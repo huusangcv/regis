@@ -1,7 +1,7 @@
 const routes = {
   home: '/',
   regis: '/regis',
-  timeTable: '/timeTable',
+  timeTable: '/timeTable/:studentCode',
   notFound: '*',
 };
 

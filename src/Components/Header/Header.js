@@ -1,11 +1,23 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import ModalDialog from '../Modal/Modal';
 
 const Header = () => {
+  const [show, setShow] = useState(false);
+  const [studentCode, setStudentCode] = useState('');
+  const navigate = useNavigate();
+
+  const handleClose = () => {
+    setShow(false);
+    navigate(`/timeTable/${studentCode}`);
+  };
+  const handleShow = () => setShow(true);
+
   return (
     <>
       <div className="header-top-right header-top g-3 d-flex justify-content-center">
         <div>
-          <div className="btn btn-primary btn-sm mr-1">
+          <div className="btn btn-primary btn-sm mr-1" onClick={handleShow}>
             <i className="fa-duotone fa-user-headset"></i> Thời khoá biểu
           </div>
         </div>
@@ -33,6 +45,7 @@ const Header = () => {
           </div>
         </div>
       </header>
+      <ModalDialog onShow={show} onClose={handleClose} studentCode={studentCode} setStudentCode={setStudentCode} />
     </>
   );
 };
