@@ -1,7 +1,8 @@
-
 const routes = {
-    homePage: "/",
-    regis: '/regis',
-    timeTable: '/timeTable'
-    
-}
+  home: '/',
+  regis: '/regis',
+  timeTable: '/timeTable',
+  notFound: '*',
+};
+
+export default routes;
