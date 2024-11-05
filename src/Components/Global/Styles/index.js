@@ -1,6 +1,7 @@
 import './Base.scss';
-import './Styles.scss';
 import './Button.scss';
+import './Styles.scss';
+import './Slidebar.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';

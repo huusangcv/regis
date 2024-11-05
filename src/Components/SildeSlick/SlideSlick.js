@@ -6,7 +6,6 @@ const SlideSlick = () => {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
     speed: 5000,
     autoplaySeed: 10000,
   };

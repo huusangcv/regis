@@ -6,38 +6,38 @@
 }
 
 :root {
-  --strong-color: #ff5600;
-  --text-color-danger: #b40202;
-  --text-color: #444444;
-  --text-hover-color: #1b8125;
-  --text-strong-color: #ff5600;
-  --text-color-muted: #818181;
-  --border-color: #e8e8e8;
-  --border-strong-color: #ff5600;
-  --background-color: #fbfbfb;
-  --background-color-error: rgb(253, 206, 210);
-  --background-grey-color: #f8f8f8;
-  --background-primary-color: #ff5600;
-  --background-primary-color-hover: #ff7d3c;
-  --background-warning-color: #ffc720;
-  --background-warning-color-hover: #ffde7a;
-  --background-danger-color: #ca3040;
-  --background-danger-color-hover: #f04052;
-  --background-info-color: #0dcaf0;
-  --background-info-color-hover: #76e8ff;
-  --background-success-color: #198754;
-  --background-success-boder-color: #198754;
-  --background-success-color-hover: #459c4e;
-  --box-shadow-color: rgba(159, 80, 250, 0.25);
-  --btn-outline-border: #868686;
-  --input-border-color: #868686;
-  --background-google-login-color: #e00000;
-  --background-google-login-color-hover: #ff0000;
-  --bs-dropdown-item-padding-y: 0;
-  --bs-dropdown-item-padding-x: 0;
-  --bs-dropdown-padding-y: 0;
-  --bs-pagination-focus-bg: rgb(253, 206, 210);
-  --bs-table-hover-bg: rgba(241, 241, 241, 0.075);
+  --strong-color: #ff5600 !important;
+  --text-color-danger: #b40202 !important;
+  --text-color: #444444 !important;
+  --text-hover-color: #1b8125 !important;
+  --text-strong-color: #ff5600 !important;
+  --text-color-muted: #818181 !important;
+  --border-color: #e8e8e8 !important;
+  --border-strong-color: #ff5600 !important;
+  --background-color: #fbfbfb !important;
+  --background-color-error: rgb(253, 206, 210) !important;
+  --background-grey-color: #f8f8f8 !important;
+  --background-primary-color: #ff5600 !important;
+  --background-primary-color-hover: #ff7d3c !important;
+  --background-warning-color: #ffc720 !important;
+  --background-warning-color-hover: #ffde7a !important;
+  --background-danger-color: #ca3040 !important;
+  --background-danger-color-hover: #f04052 !important;
+  --background-info-color: #0dcaf0 !important;
+  --background-info-color-hover: #76e8ff !important;
+  --background-success-color: #198754 !important;
+  --background-success-boder-color: #198754 !important;
+  --background-success-color-hover: #459c4e !important;
+  --box-shadow-color: rgba(159, 80, 250, 0.25) !important;
+  --btn-outline-border: #868686 !important;
+  --input-border-color: #868686 !important;
+  --background-google-login-color: #e00000 !important;
+  --background-google-login-color-hover: #ff0000 !important;
+  --bs-dropdown-item-padding-y: 0 !important;
+  --bs-dropdown-item-padding-x: 0 !important;
+  --bs-dropdown-padding-y: 0 !important;
+  --bs-pagination-focus-bg: rgb(253, 206, 210) !important;
+  --bs-table-hover-bg: rgba(241, 241, 241, 0.075) !important;
 }
 
 html {
@@ -45,7 +45,7 @@ html {
 }
 
 body {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto Slab', serif !important;
   color: var(--text-color);
   background-color: #fff;
   font-size: 1.6rem;

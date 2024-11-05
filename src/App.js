@@ -1,8 +1,18 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { publicRoutes } from './Routes/Routes';
 import DefaultLayout from './Layout/DefaultLayout';
-import { Fragment } from 'react';
+import { Fragment, useEffect } from 'react';
 const App = () => {
+  useEffect(() => {
+    document.addEventListener('DOMContentLoaded', function () {
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = '~/Loadcss.scss'; // Đường dẫn đến tập tin CSS
+
+      document.head.appendChild(link);
+    });
+  });
   return (
     <Router>
       <Routes>

@@ -1,9 +1,14 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { FaLock, FaCalendarTimes } from 'react-icons/fa';
 import ModalDialog from '../Modal/Modal';
+import Slidebar from '../SlideBar';
+import Overlay from '../Overlay';
 
 const Header = () => {
   const [show, setShow] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+  const [showSubMenu, setShowSubMenu] = useState(false);
   const [studentCode, setStudentCode] = useState('');
   const navigate = useNavigate();
 
@@ -17,15 +22,15 @@ const Header = () => {
     <>
       <div className="header-top-right header-top g-3 d-flex justify-content-center">
         <div>
-          <div className="btn btn-primary btn-sm mr-1" onClick={handleShow}>
-            <i className="fa-duotone fa-user-headset"></i> Thời khoá biểu
+          <div className="btn btn-primary btn-sm mr-1  d-flex align-items-center" onClick={handleShow}>
+            <FaCalendarTimes className="mx-1" /> Thời khoá biểu
           </div>
         </div>
-        <Link to="/login" className="btn btn-success btn-sm">
-          <i className="fa-duotone fa-lock"></i> Đăng nhập
+        <Link to="/login" className="btn btn-success btn-sm d-flex align-items-center">
+          <FaLock className="mx-1" /> Đăng nhập
         </Link>
       </div>
-      <header className="header-bottom header-logo d-flex  justify-content-start">
+      <header className="header-bottom align-items-center header-logo d-flex  justify-content-start">
         <div className="header-logo align-items-center d-flex justify-content-start">
           <div className="header-logo-left">
             <Link to="/">
@@ -44,7 +49,25 @@ const Header = () => {
             </h1>
           </div>
         </div>
+        <div class="js-menu-mobile ms-auto" onClick={() => setShowMenu(true)}>
+          <div class="trigger-menu">
+            <span class="three-bars-icon"></span>
+          </div>
+        </div>
       </header>
+
+      <Slidebar
+        showMenu={showMenu}
+        showSubMenu={showSubMenu}
+        setShowMenu={setShowMenu}
+        setShowSubMenu={setShowSubMenu}
+      />
+      <Overlay
+        showMenu={showMenu}
+        showSubMenu={showSubMenu}
+        setShowMenu={setShowMenu}
+        setShowSubMenu={setShowSubMenu}
+      />
       <ModalDialog onShow={show} onClose={handleClose} studentCode={studentCode} setStudentCode={setStudentCode} />
     </>
   );
