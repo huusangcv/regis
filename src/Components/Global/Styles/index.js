@@ -1,4 +1,5 @@
 import './Base.scss';
+import './GlobalStyles.scss';
 import './Button.scss';
 import './Styles.scss';
 import './Slidebar.scss';

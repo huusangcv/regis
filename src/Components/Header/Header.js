@@ -14,7 +14,10 @@ const Header = () => {
 
   const handleClose = () => {
     setShow(false);
-    navigate(`/timeTable/${studentCode}`);
+    if (studentCode !== '') {
+      navigate(`/timeTable/${studentCode}`);
+      setStudentCode('');
+    }
   };
   const handleShow = () => setShow(true);
 

@@ -24,7 +24,14 @@ const Slidebar = ({ showMenu, showSubMenu, setShowMenu, setShowSubMenu }) => {
                 </div>
                 <ul>
                   <li>
-                    <Link title="Chức năng nhiệm vụ" to="/introduce" onClick={() => setShowMenu(false)}>
+                    <Link
+                      title="Giới thiệu trường"
+                      to="/introduce"
+                      onClick={() => {
+                        setShowSubMenu(false);
+                        setShowMenu(false);
+                      }}
+                    >
                       Trường Đại học An Giang
                     </Link>
                   </li>
@@ -117,9 +124,9 @@ const Slidebar = ({ showMenu, showSubMenu, setShowMenu, setShowSubMenu }) => {
               </div>
             </li>
             <li>
-              <a title="Sự kiện" href="https://sao.agu.edu.vn/event/danh-sach-su-kien">
-                Sự kiện
-              </a>
+              <Link title="Đăng ký học phần" to="/regis">
+                Đăng ký học phần
+              </Link>
             </li>
             <li>
               <a title="Tin tuyển dụng" href="https://jobs.agu.edu.vn">

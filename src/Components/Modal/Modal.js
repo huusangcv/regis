@@ -2,6 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import { useNavigate } from 'react-router-dom';
+import './Modal.scss';
 
 const ModalDialog = ({ onShow, onClose, setStudentCode, studentCode }) => {
   const navigate = useNavigate();
@@ -9,11 +10,12 @@ const ModalDialog = ({ onShow, onClose, setStudentCode, studentCode }) => {
     e.preventDefault();
     if (studentCode !== '') {
       navigate(`/timeTable/${studentCode}`);
+      setStudentCode('');
       onClose();
     }
   };
   return (
-    <Modal show={onShow} onHide={onClose}>
+    <Modal show={onShow} onHide={onClose} style={{ padding: 0 }}>
       <Modal.Header closeButton>
         <Modal.Title>Xem thời khoá biểu</Modal.Title>
       </Modal.Header>
