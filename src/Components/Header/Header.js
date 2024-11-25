@@ -1,10 +1,9 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { FaLock, FaCalendarTimes } from 'react-icons/fa';
+import { FaUser, FaCalendarTimes } from 'react-icons/fa';
 import ModalDialog from '../Modal/Modal';
 import Slidebar from '../SlideBar';
 import Overlay from '../Overlay';
-
 const Header = () => {
   const [show, setShow] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
@@ -30,7 +29,7 @@ const Header = () => {
           </div>
         </div>
         <Link to="/login" className="btn btn-success btn-sm d-flex align-items-center">
-          <FaLock className="mx-1" /> Đăng nhập
+          <FaUser className="mx-1" /> Lê Hữu Sang
         </Link>
       </div>
       <header className="header-bottom align-items-center header-logo d-flex  justify-content-start">

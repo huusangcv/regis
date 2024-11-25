@@ -1,0 +1,38 @@
+.modal-control {
+  position: absolute;
+  z-index: 9999;
+  min-width: 100px;
+  max-width: 100%;
+  top: 10%;
+  left: 50%;
+  translate: -50%;
+  overflow: auto;
+  background: #ccc;
+  border-radius: 8px 8px 0 0;
+
+  &__header {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  &__close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #666;
+  }
+}
+
+table {
+  font-size: 1.4rem !important;
+  margin-bottom: 0;
+}
+
+.hidden {
+  display: none;
+}

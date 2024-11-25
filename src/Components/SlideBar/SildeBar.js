@@ -124,7 +124,7 @@ const Slidebar = ({ showMenu, showSubMenu, setShowMenu, setShowSubMenu }) => {
               </div>
             </li>
             <li>
-              <Link title="Đăng ký học phần" to="/regis">
+              <Link title="Đăng ký học phần" to="/regis" onClick={() => setShowMenu(false)}>
                 Đăng ký học phần
               </Link>
             </li>
