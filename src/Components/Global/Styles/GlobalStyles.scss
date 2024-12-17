@@ -8,3 +8,42 @@
 .css-zwiamn {
   margin: 10px 0 0 0 !important;
 }
+
+.slick-slider {
+  padding: 10px 10px 0 10px;
+}
+
+.slick-list {
+  height: 100px;
+}
+
+.classTable {
+  margin-top: 40px;
+}
+
+.slick-dots li.slick-active button:before {
+  background: #ff5600;
+  border-radius: 3px !important;
+  content: '';
+}
+
+.slick-dots li button:before {
+  background: #e8e8e8;
+  content: '' !important;
+}
+
+.slick-dots li button {
+  border-radius: 3px !important;
+}
+
+.footer {
+  padding-top: 9rem;
+  font-size: 1.4rem;
+  color: var(--text-color-muted);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.text-primary {
+  color: #ff5600 !important;
+}

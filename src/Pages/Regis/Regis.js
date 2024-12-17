@@ -8,9 +8,12 @@ import { IoMdCloseCircle } from 'react-icons/io';
 import Stack from '@mui/material/Stack';
 import Table from 'react-bootstrap/Table';
 import './Regis.scss';
+import { useDispatch } from 'react-redux';
+import { addSubject } from '~/redux/actions';
 const Regis = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const dispatch = useDispatch();
 
   const [selectData, setSelectedData] = useState([]);
   const [selectedRow, setSelectedRow] = useState(null);
@@ -109,6 +112,7 @@ const Regis = () => {
 
   const handleRowClick = (params) => {
     setSelectedData((prevData) => [...prevData, params.row]);
+    dispatch(addSubject(params.row));
   };
 
   return (

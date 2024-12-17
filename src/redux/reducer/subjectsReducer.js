@@ -1,24 +1,19 @@
-const { FILTER_MOVIES, FILTER_MOVIES_CATEGORY } = require('../constans');
-// SEE508: {},
-// SEE518: {},
-// COS521: {},
-// SHCN: {},
-// CON915: {},
-// CON915: {},
-// CON511: {},
-// MOR303: {},
-const initialState = [];
+const { ADD_SUBJECT } = require('../constans');
+const initialState = [{}];
 
-const filterReducer = (state = initialState, action) => {
+const subjectReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FILTER_MOVIES_CATEGORY:
-      return {
-        ...state,
-        ...action.payload,
-      };
+    case ADD_SUBJECT:
+      const result = initialState.find((item) => {
+        return item.code === action.payload.code;
+      });
+
+      console.log('check>>>> ', result);
+      return [...state, action.payload];
+
     default:
       return state;
   }
 };
 
-export default filterReducer;
+export default subjectReducer;

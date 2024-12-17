@@ -1,0 +1,12 @@
+@media (max-width: 1180px) {
+  .main-nav {
+    display: none;
+  }
+}
+.header .main-nav > ul {
+  display: table-row;
+}
+
+.main-nav {
+  display: flex;
+}
